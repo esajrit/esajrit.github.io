@@ -319,15 +319,22 @@ img {
     gap: 4px;
 }
 
-.stat-number {
+.stat-value {
+    display: flex;
+    align-items: baseline;
+}
+
+.stat-number,
+.stat-suffix {
     font-size: 2rem;
     font-weight: 800;
+}
+
+.stat-number {
     color: var(--white);
 }
 
 .stat-suffix {
-    font-size: 2rem;
-    font-weight: 800;
     color: var(--primary-light);
 }
 
