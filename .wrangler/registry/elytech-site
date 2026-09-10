@@ -1,0 +1,5 @@
+{
+  "debugPortAddress": "127.0.0.1:50519",
+  "defaultEntrypointService": "assets:rpc-proxy:elytech-site",
+  "userWorkerService": "core:user:elytech-site"
+}
