@@ -197,8 +197,12 @@ h1 em, h2 em { color: var(--blue-600); font-style: normal; }
 .footer-top > p { max-width: 590px; color: var(--muted); font-size: 0.75rem; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-top: 22px; color: #87909e; font-size: 0.66rem; }
 
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 620ms ease, transform 620ms ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal { animation: reveal-in 620ms ease both; }
+
+@keyframes reveal-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 :focus-visible { outline: 3px solid rgba(12, 116, 189, 0.35); outline-offset: 4px; }
 
 @media (max-width: 1050px) {
@@ -289,5 +293,5 @@ h1 em, h2 em { color: var(--blue-600); font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-    .reveal { opacity: 1; transform: none; }
+    .reveal { opacity: 1; transform: none; animation: none; }
 }
